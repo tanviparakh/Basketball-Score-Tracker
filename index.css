@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    color: white;
+     text-align: center;    
+}
+
+button{
+    background-color: transparent;
+    color: #9AABD8;
+    border: 2px solid ;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 20px;
+    align-items: center;
+    background-color: #1B244A;
+    margin: 10px;
+    padding: 20px;
+}
+
+#homeScore, #guestScore {
+    background-color: black;
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+#newGame {
+    background-color: black;
+    color:white;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.center{
+text-align: center;
+}
