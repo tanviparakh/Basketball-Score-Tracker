@@ -24,7 +24,7 @@ button{
     padding: 20px;
 }
 
-#homeScore, #guestScore {
+#teamScore1, #teamScore2, #teamScore3, #teamScore4 {
     background-color: black;
     color: red;
     padding-top: 10px;
