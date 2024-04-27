@@ -3,14 +3,14 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <h1>📖 SHIKKHONI LIVE QUIZ 🎊</h1>
+        <h1>🏆 SHIKKHONI LIVE QUIZ 🏆</h1>
         <div class="container">
             <div class = "scoreBox">
                 <h3>🐰</h3>
                 <h3 id="teamScore1">0</h3>
                 <button id="addOneT1" onclick="add1PointT1()"> +1 </button>
-                <button id="addTwoT2" onclick="add2PointsT2()"> +2 </button>
-                <button id="addThreeT3" onclick="add3PointsT3()"> +3 </button>
+                <button id="addTwoT2" onclick="add2PointsT1()"> +2 </button>
+                <button id="addThreeT3" onclick="add3PointsT1()"> +3 </button>
            </div>
             <div class="scoreBox">
                 <h3>🐥</h3>
@@ -36,7 +36,11 @@
         </div>
         <div class="center">
             <button id="newGame" onclick="resetGame()">NEW QUIZ</button>
-            </div>
+        </div>
+        <div class="buzzer">
+             <h3 id="timer">30</h3>
+            <button id="start-buzzer" onclick="toggleBuzzer()">Start Buzzer</button>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>

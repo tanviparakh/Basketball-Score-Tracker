@@ -10,6 +10,12 @@ let team2Score = document.getElementById("teamScore2")
 let team3Score = document.getElementById("teamScore3")
 let team4Score = document.getElementById("teamScore4")
 
+let secondsArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+
+let isBuzzerOn = false;
+let timerInterval = 0 
+const buzzerBtn = document.getElementById('start-buzzer')
+
 
 //Adding points for team 1
 
@@ -80,7 +86,6 @@ function add3PointsT4() {
 }
 
 
-
 function resetGame() {
     team1Total = 0
     team2Total = 0
@@ -93,4 +98,43 @@ function resetGame() {
 }
 
 
+function toggleBuzzer() {
+    if (!isBuzzerOn) {
+      startBuzzer()
+      buzzerBtn.textContent = 'Stop Buzzer'
+    } else {
+      buzzerBtn.textContent = 'Start Buzzer'
+      stopBuzzer()
+    }
+  }
 
+function startBuzzer() {
+    isBuzzerOn = true
+    timerInterval = setInterval(updateTimer, 1000)
+  }
+  
+function stopBuzzer() {
+    isBuzzerOn = false
+    clearInterval(timerInterval)
+    secondsArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30] //reset seconds array
+    document.getElementById('timer').textContent = "0"
+    buzzSound() 
+  }
+  
+  function updateTimer() {
+    const secondsRemaining = secondsArray.pop()
+  
+    if (secondsRemaining === undefined) {
+      clearInterval(timerInterval)
+      buzzerBtn.textContent = 'Start Buzzer'
+      stopBuzzer()
+        // Stop the buzzer after it finishes
+    } else {
+      document.getElementById('timer').textContent = secondsRemaining
+    }
+  }
+
+  function buzzSound() {
+    const buzzAudio = new Audio('buzzer.mp3');
+    buzzAudio.play();
+  }
