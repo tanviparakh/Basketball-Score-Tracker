@@ -4,6 +4,12 @@ body {
     background-color: #8466C6;
 }
 
+h1 {
+    font-size: 81px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 h3 {
     color: white;
      text-align: center;    
@@ -24,8 +30,12 @@ button{
     padding: 20px;
 }
 
+.scoreBox {
+    background-color: #D9D9D9;
+}
+
 #teamScore1, #teamScore2, #teamScore3, #teamScore4 {
-    background-color: black;
+    background-color: #442A7D;
     color: red;
     padding-top: 10px;
     padding-bottom: 10px;
