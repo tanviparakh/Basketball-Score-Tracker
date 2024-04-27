@@ -6,7 +6,8 @@ body {
 
 h1 {
     font-size: 81px;
-    color: black;
+    text-align: center;
+    color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -32,6 +33,7 @@ button{
 
 .scoreBox {
     background-color: #D9D9D9;
+    border: 1px solid white;
 }
 
 #teamScore1, #teamScore2, #teamScore3, #teamScore4 {
