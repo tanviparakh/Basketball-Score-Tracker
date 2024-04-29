@@ -16,8 +16,10 @@
     </div>
     <div class="center">
       <button id="start-game" onclick="startQuiz()">Start Quiz ➜</button>
+      <button id="endQuizButton" onclick = "determineWinner()">End Quiz ➜</button>
       <button id="newGame" onclick="resetGame()">New Quiz ➜ </button>
     </div>
+    <div id="winnerText" class="winner-display"></div>
     <div class="scoreContainers">
       <div class="container">
         <div class="scoreBox">
@@ -144,6 +146,7 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
     <script src="index.js"></script>
   </body>
 </html>

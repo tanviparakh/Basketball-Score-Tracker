@@ -258,6 +258,47 @@ function startQuiz() {
     });
 }
 
+//code for Ending Quiz
+function determineWinner() {
+    const scores = [
+        team1Total, team2Total, team3Total, team4Total,
+        team5Total, team6Total, team7Total, team8Total
+    ];
+    const highestScore = Math.max(...scores);
+    const winningTeams = [];
+    scores.forEach((score, index) => {
+        if (score === highestScore) {
+            winningTeams.push(index + 1);
+        }
+    });
+
+    displayWinner(winningTeams, highestScore);
+}
+
+function displayWinner(winningTeams, score) {
+    const winnerText = document.getElementById('winnerText');
+    if (winningTeams.length > 1) {
+        winnerText.textContent = `It's a tie between teams ${winningTeams.join(', ')} with ${score} points each!`;
+    } else {
+        winnerText.textContent = `Team ${winningTeams[0]} wins with ${score} points!`;
+    }
+    playSound();
+    triggerConfetti();
+}
+
+function playSound() {
+    const sound = new Audio('winner-sound.mp3');
+    sound.play();
+}
+
+function triggerConfetti() {
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+}
+
 function resetGame() {
     team1Total = 0
     team2Total = 0
@@ -288,7 +329,10 @@ function resetGame() {
         display.textContent = ""; // Clearing the text content
     });
 
-    // Reattach event listeners if necessary (not needed if using class-based visibility)
+    // Clear winner text
+    const winnerText = document.getElementById('winnerText');
+    winnerText.textContent = '';
+    
 }
 
 function toggleBuzzer() {

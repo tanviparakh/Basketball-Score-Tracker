@@ -45,7 +45,7 @@ button{
     justify-content: space-around;
     column-gap: 30px;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 20px;
 }
 
@@ -87,12 +87,13 @@ font-size: 36px; /* Timer text size */
 font-weight: bold;
 }
 
-#start-buzzer, #newGame, #start-game  {
+#start-buzzer, #newGame, #start-game, #endQuizButton {
     border-radius: 12px;
     background-color: white;
     color: black;
     width: 120px;
     height: 30px;
+    margin-bottom: 0;
 }
 
 
@@ -149,4 +150,12 @@ font-weight: bold;
 
 .visible {
     display: flex; /* or 'block', depending on your layout needs */
+}
+
+.winner-display {
+    font-size: 24px;
+    color: #DAA520; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
