@@ -12,17 +12,17 @@ let team8Total = 0
 let team1Score = document.getElementById("teamScore1")
 let team2Score = document.getElementById("teamScore2")
 let team3Score = document.getElementById("teamScore3")
-let team5Score = document.getElementById("teamScore4")
-let team6Score = document.getElementById("teamScore5")
-let team7Score = document.getElementById("teamScore6")
-let team8Score = document.getElementById("teamScore7")
-let team9Score = document.getElementById("teamScore8")
+let team4Score = document.getElementById("teamScore4")
+let team5Score = document.getElementById("teamScore5")
+let team6Score = document.getElementById("teamScore6")
+let team7Score = document.getElementById("teamScore7")
+let team8Score = document.getElementById("teamScore8")
 
 let secondsArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
 let isBuzzerOn = false;
 let timerInterval = 0 
-const buzzerBtn = document.getElementById('start-buzzer')
+const buzzerBtn = document.getElementById('timer')
 
 
 //for displaying player input for team 1
@@ -251,10 +251,11 @@ function add3PointsT8() {
 
 
 function startQuiz() {
-const inputContainers = document.querySelectorAll(".playerDeets");
-  inputContainers.forEach(container => {
-    container.style.display = "none";
-  });
+    const inputContainers = document.querySelectorAll(".playerDeets");
+    inputContainers.forEach(container => {
+        container.classList.remove('visible');
+        container.classList.add('hidden');
+    });
 }
 
 function resetGame() {
@@ -277,18 +278,25 @@ function resetGame() {
     team8Score.textContent = team8Total
 
     const playerDeetsSections = document.querySelectorAll(".playerDeets");
-  playerDeetsSections.forEach(section => {
-    section.style.display = "flex";
-  });
-}
+    playerDeetsSections.forEach(section => {
+        section.classList.remove('hidden');
+        section.classList.add('visible');
+    });
 
+    const playerNamesDisplay = document.querySelectorAll(".player-names");
+    playerNamesDisplay.forEach(display => {
+        display.textContent = ""; // Clearing the text content
+    });
+
+    // Reattach event listeners if necessary (not needed if using class-based visibility)
+}
 
 function toggleBuzzer() {
     if (!isBuzzerOn) {
       startBuzzer()
-      buzzerBtn.textContent = 'Stop Buzzer'
+      //buzzerBtn.textContent = 'Stop Buzzer'
     } else {
-      buzzerBtn.textContent = 'Start Buzzer'
+      //buzzerBtn.textContent = 'Start Buzzer'
       stopBuzzer()
     }
   }

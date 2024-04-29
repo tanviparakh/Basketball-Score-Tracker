@@ -11,19 +11,22 @@
       <h1>🏆 SHIKKHONI</h1>
       <div class="buzzer">
         <h3 id="timer" onclick="toggleBuzzer()">15</h3>
-        <button id="start-buzzer" onclick="toggleBuzzer()">Start Buzzer</button>
       </div>
       <h1>LIVE QUIZ 🏆</h1>
+    </div>
+    <div class="center">
+      <button id="start-game" onclick="startQuiz()">Start Quiz ➜</button>
+      <button id="newGame" onclick="resetGame()">New Quiz ➜ </button>
     </div>
     <div class="scoreContainers">
       <div class="container">
         <div class="scoreBox">
           <h3>🐰</h3>
-          <div class="playerDeets">
+          <div class="playerDeets visible">
             <input type="text" id="team1Players" placeholder="Enter Players" />
-            <button id="enter-btn-t1">➜</button>
+            <button class = "enter-buttons" id="enter-btn-t1">➜</button>
           </div>
-          <p id="t1-player-names"></p>
+          <p class="player-names" id="t1-player-names"></p>
           <h3 id="teamScore1">0</h3>
           <div class="scoreBtns">
             <button id="addOneT1" onclick="add1PointT1()">+1</button>
@@ -35,9 +38,9 @@
           <h3>🐥</h3>
           <div class="playerDeets">
             <input type="text" id="team2Players" placeholder="Enter Players" />
-            <button id="enter-btn-t2">➜</button>
+            <button class = "enter-buttons" id="enter-btn-t2">➜</button>
           </div>
-          <p id="t2-player-names"></p>
+          <p class="player-names"id="t2-player-names"></p>
           <h3 id="teamScore2">0</h3>
           <div class="scoreBtns">
             <button id="addOneT2" onclick="add1PointT2()">+1</button>
@@ -49,9 +52,9 @@
           <h3>🐍</h3>
           <div class="playerDeets">
             <input type="text" id="team3Players" placeholder="Enter Players" />
-            <button id="enter-btn-t3">➜</button>
+            <button class = "enter-buttons" id="enter-btn-t3">➜</button>
           </div>
-          <p id="t3-player-names"></p>
+          <p class="player-names" id="t3-player-names"></p>
           <h3 id="teamScore3">0</h3>
           <div class="scoreBtns">
             <button id="addOneT3" onclick="add1PointT3()">+1</button>
@@ -63,9 +66,9 @@
           <h3>🦁</h3>
           <div class="playerDeets">
             <input type="text" id="team4Players" placeholder="Enter Players" />
-            <button id="enter-btn-t4">➜</button>
+            <button class = "enter-buttons"id="enter-btn-t4">➜</button>
           </div>
-          <p id="t4-player-names"></p>
+          <p class="player-names" id="t4-player-names"></p>
           <h3 id="teamScore4">0</h3>
           <div class="scoreBtns">
             <button id="addOneT4" onclick="add1PointT4()">+1</button>
@@ -76,12 +79,12 @@
       </div>
       <div class="container">
         <div class="scoreBox">
-          <h3>🐰</h3>
+          <h3>🐸</h3>
           <div class="playerDeets">
             <input type="text" id="team5Players" placeholder="Enter Players" />
-            <button id="enter-btn-t5">➜</button>
+            <button class = "enter-buttons" id="enter-btn-t5">➜</button>
           </div>
-          <p id="t5-player-names"></p>
+          <p class="player-names" id="t5-player-names"></p>
           <h3 id="teamScore5">0</h3>
           <div class="scoreBtns">
             <button id="addOneT5" onclick="add1PointT5()">+1</button>
@@ -90,12 +93,12 @@
           </div>
         </div>
         <div class="scoreBox">
-          <h3>🐰</h3>
+          <h3>🐬</h3>
           <div class="playerDeets">
             <input type="text" id="team6Players" placeholder="Enter Players" />
-            <button id="enter-btn-t6">➜</button>
+            <button class = "enter-buttons" id="enter-btn-t6">➜</button>
           </div>
-          <p id="t6-player-names"></p>
+          <p class="player-names" id="t6-player-names"></p>
           <h3 id="teamScore6">0</h3>
           <div class="scoreBtns">
             <button id="addOneT6" onclick="add1PointT6()">+1</button>
@@ -104,15 +107,15 @@
           </div>
           </div>
           <div class="scoreBox">
-            <h3>🐰</h3>
+            <h3>🦒</h3>
             <div class="playerDeets">
               <input
                 type="text"
                 id="team7Players"
                 placeholder="Enter Players">
-              <button id="enter-btn-t7">➜</button>
+              <button class = "enter-buttons" id="enter-btn-t7">➜</button>
             </div>
-            <p id="t7-player-names"></p>
+            <p class="player-names" id="t7-player-names"></p>
             <h3 id="teamScore7">0</h3>
             <div class="scoreBtns">
               <button id="addOneT7" onclick="add1PointT7()">+1</button>
@@ -121,16 +124,16 @@
             </div>
           </div>
           <div class="scoreBox">
-            <h3>🐰</h3>
+            <h3>🐘</h3>
             <div class="playerDeets">
               <input
                 type="text"
                 id="team8Players"
                 placeholder="Enter Players"
               />
-              <button id="enter-btn-t8">➜</button>
+              <button class = "enter-buttons" id="enter-btn-t8">➜</button>
             </div>
-            <p id="t8-player-names"></p>
+            <p class="player-names" id="t8-player-names"></p>
             <h3 id="teamScore8">0</h3>
             <div class="scoreBtns">
               <button id="addOneT8" onclick="add1PointT8()">+1</button>
@@ -140,10 +143,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="center">
-      <button id="start-game" onclick="startQuiz()">START QUIZ</button>
-      <button id="newGame" onclick="resetGame()">NEW QUIZ</button>
     </div>
     <script src="index.js"></script>
   </body>
