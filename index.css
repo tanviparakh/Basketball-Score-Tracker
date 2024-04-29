@@ -5,9 +5,10 @@ body {
 }
 
 h1 {
+    margin: 0;
     font-size: 81px;
     text-align: center;
-    color: white;
+    color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -15,32 +16,45 @@ h3 {
     color: white;
      text-align: center;    
      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-     font-size: 36px;
+     font-size: 48px;
+     margin: 0;
 }
 
 button{
     background-color: transparent;
-    color: #9AABD8;
+    color: white;
     border: 2px solid ;
 }
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Adjust the height as needed */
+    column-gap: 40px;
+    background-color: #EDEDED;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 35px;
+    border-radius: 25px;
+}
+
+/*
+.scoreContainers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}*/
+
 
 .container {
     display: flex;
     justify-content: space-around;
-    column-gap: 20px;
+    column-gap: 30px;
     align-items: center;
-    margin: 10px;
+    margin-top: 50px;
     padding: 20px;
-}
-
-
-#teamScore1, #teamScore2, #teamScore3, #teamScore4 {
-    background-color: #442A7D;
-    color: red;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: monospace;
-    font-size: 2rem;
 }
 
 #newGame {
@@ -60,3 +74,76 @@ text-align: center;
 .buzzer {
 text-align: center;
 }
+
+#timer {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 165px; /* Adjust width as needed */
+height: 165px;
+border-radius: 50%;
+background-color: #8466C6; /* Circle background color */
+border: 10px solid #ff6347; /* Border color and width */
+color: #fff; /* Timer text color */
+font-size: 36px; /* Timer text size */
+font-weight: bold;
+}
+
+#start-buzzer {
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+}
+
+
+.scoreBox{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    text-align: center; 
+}
+
+
+.scoreBtns{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;;
+}
+
+#teamScore1, #teamScore2, #teamScore3, #teamScore4, #teamScore5, #teamScore6, #teamScore7, #teamScore8 {
+    background-color: #442A7D;
+    color: red;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: monospace;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    width:140px;
+    height: 50px;
+    
+}
+
+
+
+#newGame, #start-game {
+    width: 175px;
+    height: 40px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 20px;
+
+}
+
+#team1Players, #team2Players, #team3Players, #team4Players, #team5Players, #team6Players, #team7Players, #team8Players {
+    width: 100px;
+    border:1px solid white;
+    border-radius: 5px;
+}
+
+.playerDeets{
+    margin-top: 20px;
+}
+

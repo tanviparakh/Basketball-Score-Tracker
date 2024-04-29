@@ -1,46 +1,150 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1>🏆 SHIKKHONI LIVE QUIZ 🏆</h1>
-        <div class="container">
-            <div class = "scoreBox">
-                <h3>🐰</h3>
-                <h3 id="teamScore1">0</h3>
-                <button id="addOneT1" onclick="add1PointT1()"> +1 </button>
-                <button id="addTwoT2" onclick="add2PointsT1()"> +2 </button>
-                <button id="addThreeT3" onclick="add3PointsT1()"> +3 </button>
-           </div>
-            <div class="scoreBox">
-                <h3>🐥</h3>
-                <h3 id="teamScore2">0</h3>
-                <button id="addOneT2" onclick="add1PointT2()"> +1 </button>
-                <button id="addOTwoT2" onclick="add2PointsT2()"> +2 </button>
-                <button id="addTwoT3" onclick="add3PointsT2()"> +3 </button>
-            </div>
-            <div class="scoreBox">
-                <h3>🐍</h3>
-                <h3 id="teamScore3">0</h3>
-                <button id="addOneT3" onclick="add1PointT3()"> +1 </button>
-                <button id="addTwoT3" onclick="add2PointsT3()"> +2 </button>
-                <button id="addThreeT3" onclick="add3PointsT3()"> +3 </button>
-            </div>
-            <div class="scoreBox">
-                <h3>🦁</h3>
-                <h3 id="teamScore4">0</h3>
-                <button id="addOneT4" onclick="add1PointT4()"> +1 </button>
-                <button id="addTwoT4" onclick="add2PointsT4()"> +2 </button>
-                <button id="addThreeT4" onclick="add3PointsT4()"> +3 </button>
-            </div>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>🏆 SHIKKHONI</h1>
+      <div class="buzzer">
+        <h3 id="timer" onclick="toggleBuzzer()">15</h3>
+        <button id="start-buzzer" onclick="toggleBuzzer()">Start Buzzer</button>
+      </div>
+      <h1>LIVE QUIZ 🏆</h1>
+    </div>
+    <div class="scoreContainers">
+      <div class="container">
+        <div class="scoreBox">
+          <h3>🐰</h3>
+          <div class="playerDeets">
+            <input type="text" id="team1Players" placeholder="Enter Players" />
+            <button id="enter-btn-t1">➜</button>
+          </div>
+          <p id="t1-player-names"></p>
+          <h3 id="teamScore1">0</h3>
+          <div class="scoreBtns">
+            <button id="addOneT1" onclick="add1PointT1()">+1</button>
+            <button id="addTwoT2" onclick="add2PointsT1()">+2</button>
+            <button id="addThreeT3" onclick="add3PointsT1()">+3</button>
+          </div>
         </div>
-        <div class="center">
-            <button id="newGame" onclick="resetGame()">NEW QUIZ</button>
+        <div class="scoreBox">
+          <h3>🐥</h3>
+          <div class="playerDeets">
+            <input type="text" id="team2Players" placeholder="Enter Players" />
+            <button id="enter-btn-t2">➜</button>
+          </div>
+          <p id="t2-player-names"></p>
+          <h3 id="teamScore2">0</h3>
+          <div class="scoreBtns">
+            <button id="addOneT2" onclick="add1PointT2()">+1</button>
+            <button id="addOTwoT2" onclick="add2PointsT2()">+2</button>
+            <button id="addTwoT3" onclick="add3PointsT2()">+3</button>
+          </div>
         </div>
-        <div class="buzzer">
-             <h3 id="timer">30</h3>
-            <button id="start-buzzer" onclick="toggleBuzzer()">Start Buzzer</button>
+        <div class="scoreBox">
+          <h3>🐍</h3>
+          <div class="playerDeets">
+            <input type="text" id="team3Players" placeholder="Enter Players" />
+            <button id="enter-btn-t3">➜</button>
+          </div>
+          <p id="t3-player-names"></p>
+          <h3 id="teamScore3">0</h3>
+          <div class="scoreBtns">
+            <button id="addOneT3" onclick="add1PointT3()">+1</button>
+            <button id="addTwoT3" onclick="add2PointsT3()">+2</button>
+            <button id="addThreeT3" onclick="add3PointsT3()">+3</button>
+          </div>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <div class="scoreBox">
+          <h3>🦁</h3>
+          <div class="playerDeets">
+            <input type="text" id="team4Players" placeholder="Enter Players" />
+            <button id="enter-btn-t4">➜</button>
+          </div>
+          <p id="t4-player-names"></p>
+          <h3 id="teamScore4">0</h3>
+          <div class="scoreBtns">
+            <button id="addOneT4" onclick="add1PointT4()">+1</button>
+            <button id="addTwoT4" onclick="add2PointsT4()">+2</button>
+            <button id="addThreeT4" onclick="add3PointsT4()">+3</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="scoreBox">
+          <h3>🐰</h3>
+          <div class="playerDeets">
+            <input type="text" id="team5Players" placeholder="Enter Players" />
+            <button id="enter-btn-t5">➜</button>
+          </div>
+          <p id="t5-player-names"></p>
+          <h3 id="teamScore5">0</h3>
+          <div class="scoreBtns">
+            <button id="addOneT5" onclick="add1PointT5()">+1</button>
+            <button id="addTwoT5" onclick="add2PointsT5()">+2</button>
+            <button id="addThreeT5" onclick="add3PointsT5()">+3</button>
+          </div>
+        </div>
+        <div class="scoreBox">
+          <h3>🐰</h3>
+          <div class="playerDeets">
+            <input type="text" id="team6Players" placeholder="Enter Players" />
+            <button id="enter-btn-t6">➜</button>
+          </div>
+          <p id="t6-player-names"></p>
+          <h3 id="teamScore6">0</h3>
+          <div class="scoreBtns">
+            <button id="addOneT6" onclick="add1PointT6()">+1</button>
+            <button id="addTwoT6" onclick="add2PointsT6()">+2</button>
+            <button id="addThreeT6" onclick="add3PointsT6()">+3</button>
+          </div>
+          </div>
+          <div class="scoreBox">
+            <h3>🐰</h3>
+            <div class="playerDeets">
+              <input
+                type="text"
+                id="team7Players"
+                placeholder="Enter Players">
+              <button id="enter-btn-t7">➜</button>
+            </div>
+            <p id="t7-player-names"></p>
+            <h3 id="teamScore7">0</h3>
+            <div class="scoreBtns">
+              <button id="addOneT7" onclick="add1PointT7()">+1</button>
+              <button id="addTwoT7" onclick="add2PointsT7()">+2</button>
+              <button id="addThreeT7" onclick="add3PointsT7()">+3</button>
+            </div>
+          </div>
+          <div class="scoreBox">
+            <h3>🐰</h3>
+            <div class="playerDeets">
+              <input
+                type="text"
+                id="team8Players"
+                placeholder="Enter Players"
+              />
+              <button id="enter-btn-t8">➜</button>
+            </div>
+            <p id="t8-player-names"></p>
+            <h3 id="teamScore8">0</h3>
+            <div class="scoreBtns">
+              <button id="addOneT8" onclick="add1PointT8()">+1</button>
+              <button id="addTwoT8" onclick="add2PointsT8()">+2</button>
+              <button id="addThreeT8" onclick="add3PointsT8()">+3</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <button id="start-game" onclick="startQuiz()">START QUIZ</button>
+      <button id="newGame" onclick="resetGame()">NEW QUIZ</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
